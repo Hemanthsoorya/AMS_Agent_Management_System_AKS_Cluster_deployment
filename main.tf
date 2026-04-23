@@ -59,6 +59,13 @@ resource "azurerm_resource_group" "main" {
   name     = "RG-EDJ-Enterprise-LMS-Application"
   location = "CentralUS"
 }
+# resource "azurerm_kubernates_cluster" "aks"
+#  name                = "aks-cluster"
+#  location            = azurerm_resource_group.main.location
+#  resource_group_name = azurerm_resource_group.main.name
+#  dns_prefix          = "aksapp"
+
+
 
 # --- 3. Fixed AKS Cluster ---
 resource "azurerm_kubernetes_cluster" "aks" {
